@@ -1,0 +1,37 @@
+/* at rules */
+@import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
+
+/* 
+Universal Selector => *
+Font Integration
+    i. local Machine integrate
+    2. global integrate or project floder integration
+ */
+
+/* local machine integrate */
+*{
+    font-family:monospace;
+}
+body{
+    background-color: #000;
+    color: #fff;
+}
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p{
+    font-family:sans-serif;
+}
+div{
+    font-family: "Stick", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+span {
+    font-family: "Akaya Telivigala", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
