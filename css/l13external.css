@@ -1,0 +1,13 @@
+/* group selector */
+h3,div{
+    color:rgb(30, 0, 255);
+}
+/* single selector */
+span{
+    display: block;
+}
+/* id selector */
+#myself{
+    color: red;
+    display: inline;
+}

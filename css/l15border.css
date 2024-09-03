@@ -1,0 +1,53 @@
+.solid{
+    border-style: solid;
+}
+.double{
+    border-style : double;
+}
+.dotted{
+    border-style: dotted;
+}
+.dashed{
+    border-style: dashed;
+}
+.inset{
+    border-style:inset;
+}
+.outset{
+    border-style: outset;
+}
+.yellow-box{
+    width: 300px;
+    height: 300px;
+    background: yellow;
+    /* circle */
+    /* border-radius: 50%;   */ 
+
+    /* clockwise => lt rt rb lb */
+    /* border-radius: 50% 20%; */
+    border-radius: 50% 20% 50% 20%;
+    /* BSC => border/stroke style color */
+    border:5px dashed red;
+
+    border:1px;
+    border-style:double;
+    border-color: blue;
+
+}
+
+ul{ 
+    /* list-style is same
+    list-style-type: none; */
+   
+}
+
+li{
+    /* same in ul */
+    /* list-style-type:circle; */
+    list-style-type: square;
+    /* list-style-type: disc; */
+    list-style-type: decimal-leading-zero;
+    list-style-position: inside;
+    list-style-position: outside; /*default*/
+    border: 1px solid red;
+}
