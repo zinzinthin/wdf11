@@ -1,0 +1,49 @@
+/*
+pseudo class (:)
+*/
+body{
+	background: black;
+	color:#fff;
+}
+
+div{
+	width:300px;
+ 	height: 100px;
+ 	background-color: lightblue;
+}
+
+.div1{
+	
+ 	background: green;
+}
+
+/*first child => parent(body)'s first child*/
+.div1:first-child{
+	background-color:orange;
+}
+.div1:last-child{
+	background-color: gray;
+}
+
+/*first-of-type => its same type (div1)*/
+/*.div1:first-of-type{
+	background-color:orange;
+}*/
+/*.div1:last-of-type{
+	background-color: gray;	
+}
+*/
+/*.div1:nth-child(1){
+	background-color: blue;
+}
+
+.div1:nth-of-type(even){
+	background-color:orange;
+	
+}
+
+.div1:nth-of-type(odd){
+	background-color: red;
+}*/
+
+/*29TH*/
