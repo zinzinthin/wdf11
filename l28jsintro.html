@@ -6,8 +6,9 @@
 <body>
 	<p>Hey</p>
 
-	<!-- internal integration style -->
+	<!-- internal integration js -->
 	<script type="text/javascript">
+
 		console.log("Aung Aung");
 		console.log('Kyaw Kyaw');
 		console.log(`Su Su`);
@@ -37,23 +38,30 @@
 
 		// alert("Hello");
 		// window.alert("Myanmar");
-		//alert(fullname); //Error : can't access lexical declaration 'fullname' before initialization 
+
+		//declare var keywork 
 		//alert(fullname); //Undefine
+		//fullname = "Zin Zin";
+		//console.log(fullname); //Zin Zin
+
+		//declare let keywork 
+		//console.log(fullname); //Error : can't access lexical declaration 'fullname' before initialization 
+		//fullname = "Zin Zin";
+		//console.log(fullname); // Uncaught ReferenceError: Cannot access 'fullname' before initialization
 
 
-		//Variable (var/let/const)
-		//var/let/const variablename = value;
+		//Variable (var/let/const) => var/let/const variablename = value;
 
-		//let fullname = "Myo Myo"; 
-		var fullname = "Aye Aye";
+		var fullname = "Myo Myo"; 
+		//let fullname = "Aye Aye";
 		console.log(fullname);
 
-		//concatenate (+);
+	//concatenate (+);
 		console.log("My friend is " + fullname);
 		console.log('My friend is ' + fullname);
 		console.log(`My friend name is ` + fullname);
 
-		//Backticks (``)
+	//Backticks (``)
 		var lady = "Honey Nway Oo";
 		console.log("We love lady");
 		console.log(`We love lady ${lady}`); //We love lady Honey Nway Oo
@@ -72,8 +80,7 @@
 		console.log(`${num1 + num2}`); //30
 		console.log(typeof `${num1 + num2}`); //string
 
-		//Overwrit / Override
-
+	//Overwrite / Override
 		var num3 = 30;
 		var num4 = 40;
 
@@ -115,8 +122,6 @@
 
 		console.log(`${x} ${y}`); //He's U Ba He 's my "uncle" 
 		console.log(x + y); //He's U BaHe 's my "uncle"
-
-
 
 
 	</script>

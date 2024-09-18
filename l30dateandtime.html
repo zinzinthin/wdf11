@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date and Time</title>
+</head>
+<body>
+
+	<div>
+		<small>&copy; <span id="autoyear"></span> Design</small>
+	</div>
+
+	<script type="text/javascript">
+
+		let mydate = new Date(); 
+		console.log(mydate);
+		console.log(typeof mydate); //object
+
+		let getdate = mydate.getDate();
+		console.log(getdate); //18
+
+		let hour = new Date().getHours();
+		console.log(hour); 
+
+		let minute = mydate.getMinutes();
+		console.log(minute);
+
+		let second = mydate.getSeconds();
+		console.log(second);
+
+		// 1s = 1000ms
+		// 1 jan 1970 > uptonow
+
+		let time = mydate.getTime();//float value
+		console.log(time);
+
+		let now = Date.now(); //function//round value - same at new Date().getTime() 
+		console.log(now);
+
+		
+		let month = mydate.getMonth();
+		console.log(month); //8
+
+		let day = mydate.getDay();
+		console.log(day); //3
+
+		let year = mydate.getFullYear();
+		console.log(year); //2024
+
+		let utcyear = mydate.getUTCFullYear();
+		console.log(utcyear);
+
+
+		document.getElementById("autoyear").textContent = utcyear;
+		document.getElementById("autoyear").innerText = utcyear;
+		document.getElementById("autoyear").innerHTML = utcyear;
+
+
+
+	</script>
+</body>
+</html>
