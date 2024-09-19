@@ -54,6 +54,23 @@
 		document.getElementById("autoyear").innerText = utcyear;
 		document.getElementById("autoyear").innerHTML = utcyear;
 
+		//m d y hr:m:s
+		let birthday = new Date("7-10-2020");//Fri Jul 10 2020 00:00:00 GMT+0630 (Myanmar Time)
+		//birthday = new Date("Aug 2 2024 11:46:00:24");//Fri Aug 02 2024 11:46:00 GMT+0630 (Myanmar Time)
+
+		console.log(birthday);
+
+		console.log(birthday.getMonth());
+
+		birthday.setMonth(1); //feb
+		birthday.setDate(9); //9
+		birthday.setYear(1999);
+		birthday.setHours(25);
+		birthday.setMinutes(50);
+		birthday.setSeconds(23);
+
+		console.log(birthday); //Tue Feb 09 1999 00:00:00 GMT+0630 (Myanmar Time)
+
 
 
 	</script>
