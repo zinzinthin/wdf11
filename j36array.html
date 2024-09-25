@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		let arrgirls = new Array("su su", "lu lu","hla hla");
+		console.log(arrgirls);
+		console.log(arrgirls);
+		console.table(arrgirls);
+
+		const arrboys = ['mg mg', 'naung naung', 'kyaw gyi', 'zaw zaw' , 200];
+		console.log(arrboys);
+		console.log(arrboys.length);
+		console.log(typeof arrboys);
+
+		console.info(arrboys[0]);
+		console.log(arrboys[arrboys.length-1]); //200
+		console.log(arrboys[arrboys.length-3]); //kyaw gyi
+
+		let myarrs = ['hello', 1500, true, undefined, null , new Date(), ['red','green'],{firstname:'kyaw kyaw',city : 'yangon'}];
+
+		console.log(myarrs);
+		console.log(myarrs.length);
+		console.log(myarrs[0]);
+		console.log(myarrs[5]);
+		console.log(myarrs[6][0]);
+		console.log(myarrs[7]);
+		console.log(myarrs[7].firstname);
+		console.log(myarrs[7].city);
+
+		let colors = ["red", "green" , "blue"];
+		colors = ["rgba" , "cmyk"] ;
+		console.log(colors);
+
+		let paints = ['red','green',,'blue'];
+		console.log(paints);
+		console.log(typeof paints[2]); //undefine
+
+		let colours = [];
+		colours[0] = "white";
+		colours[3] = "gold";
+		colours[1] = "gray";
+
+		console.log(colours);
+		console.log(colours.length); //4
+		console.log(colours[2]); //undefined
+
+		let aniamls = ['cat', 'dog'];
+		aniamls[2] = "owl";
+		aniamls[3] = "tiger";
+		aniamls[0] = "fish";
+
+		//Nested array
+		const nestarrs = [
+			["red","green","blue"],
+			["cmy","erta","kgdf","fsdf"],
+			["fdj","cfds",",df",["ink","aa"]]
+			];
+		console.log(nestarrs);
+		console.log(nestarrs[1]); //["cmy","erta","kgdf","fsdf"]
+		console.log(nestarrs[1][1]); //erta
+		console.log(nestarrs[2][3][0]); //ink
+	</script>
+</body>
+</html>
