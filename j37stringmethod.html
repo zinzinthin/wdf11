@@ -57,9 +57,9 @@
 	//startsWith("");
 	//startWith("",index);
 	const sayhi = "Dear U Ba";
-	console.log(sayhi.startsWith("Dear"));
-	console.log(sayhi.startsWith("dear"));
-	console.log(sayhi.startsWith("D"));
+	console.log(sayhi.startsWith("Dear")); //true
+	console.log(sayhi.startsWith("dear")); //false
+	console.log(sayhi.startsWith("D")); //true
 
 	console.log(sayhi.startsWith("Dear",0));
 	console.log(sayhi.startsWith("ar",2));
@@ -71,9 +71,9 @@
 	console.log(sayhi.endsWith("dear"));
 	console.log(sayhi.endsWith("D"));
 
-	console.log(sayhi.endsWith("Dear",0));
+	console.warn(sayhi.endsWith("Dear",0));
 	console.log(sayhi.endsWith("ar",2));
-	console.log(sayhi.endsWith("U",5));
+	console.log(sayhi.endsWith("U",6));
  
  //substring(index,length)
 	console.log(favcolor.substring(0,10).concat("...")); // My fav col...
