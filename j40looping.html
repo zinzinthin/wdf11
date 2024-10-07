@@ -7,9 +7,164 @@
 </head>
 <body>
 	<script type="text/javascript">
-		for(const p=0; p<5; p++){
-			console.log("Error bcz can't increase p");
+		// for(const p=0; p<5; p++){
+		// 	console.log("Error bcz can't increase p");
+		// }
+
+		const peoples = [
+				{name : "su su", age : 20},
+				{name : "maung maung",age : 34},
+				{name : "ko ko" ,age : 25},
+			];
+		for(let p = 0; p < peoples.length; p++){
+			console.log(peoples[p].name,peoples[p].age);
 		}
+
+		for(let i=0;i<10;i++){
+			if(i==2){
+				console.log(`${i} is my fav color`);
+				break;
+			}
+
+			console.log(i);
+		}
+
+
+		let odd = [];
+		for(var m=0; m<10; m++){
+			if(m%2 == 0){
+				continue;
+			}
+
+			odd.push(m);
+		}
+		//odd[m/2] = m;
+		console.log(`odd number is ${odd}`);
+
+		let students = {
+			name : "Aung Aung",
+			city : "Mandalay",
+			parent : "U Ba",
+			phone : "080398509",
+		}
+		console.log(students);
+		console.log(students.name);
+
+		for(key in students){
+			console.log(key);
+			//console.log(students.key); //Error bcz for in loop works as array, so can't use like object
+
+			console.log(students[key]);
+			console.warn(students.length);
+		}
+
+		//3.for of loop(array)
+		//for(value of array)
+
+		const girls = ["su su","yu yu","aya aya"];
+
+		for(girl of girls){
+
+		}
+
+		//4. While loop
+		// start
+		// while(condition){
+		// 	//Before printout
+		// 	//code to be executed
+		// 	//After Printout
+		// }
+		let b = 0;
+		while(b < 10){
+			console.log("Number b value is  = " , b);
+			b++
+		}
+
+		let c = 0;
+		while(c < 10){
+			c++
+			console.log("Number c value is  = " , c);
+			
+		}
+
+		//5.Do While loop
+		// start
+		// do{
+		// 	//Before printout
+		// 	//code to be executed
+		// 	//After Printout
+		// }while(condition)
+		const paints = ["red","white","black"];
+		var num = 0;
+		while(num < paints.length){
+			console.log("paint is" , paints[num]);
+			num++;
+		}
+
+		const laptop = [
+		{
+			cpu : "corei9",
+			ram : "16gb",
+			hdd : "1tb",
+		}
+		];
+		let id = 0;
+		while(id < laptop.length){
+			console.log("cup is" , laptop[id].cpu, "ram is " , laptop[id].ram);
+			id++;
+		}
+
+		let n =0;
+		do{
+			console.log(n);
+			n++;
+		}while(n<10);
+
+		const colors = ["red","green","blue"];
+		let index = 0;
+		do{
+			console.log(`index ${index} is`, colors[index]);
+			++index;
+		}while(index < colors.length);
+
+		//6.foreach
+		// colors.forEach(function(value,index,array){
+		// 	//code to be execute
+		// });
+
+		colors.forEach(function(color,index,array){
+			console.log(color);
+			console.log(index);
+			console.log(array);
+		});
+
+		//7.map
+		// colors.map(function(value,index,array){
+		// 	//code to be execute
+		// });
+		const maptest = colors.map(function(color){
+			//console.log(color);
+			return `Dr.${color}`; //return array
+		});
+		console.log(maptest);
+
+		const foreachtest = colors.forEach(function(color){
+			//console.log(color);
+			return `Dr.${color}`; //return array
+		});
+		console.log(foreachtest); //undefine
+
+		//8.filter
+		const ages = [3,5,64,65,55,76,98,2,63,23,54,22,11,23,59];
+		const ageover18 = ages.filter(function(age){
+			console.log(age > 18); //true/false
+			return age > 18;
+		});
+
+		console.log(ageover18);
+
+
+
 	</script>
 </body>
 </html>
