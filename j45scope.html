@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Scope</title>
+</head>
+
+<body>
+    <script>
+        //Global scope
+        const name = "Aung Aung";
+        console.log(name);
+
+        let city = "Mandalay";
+        city = "Yangon";
+
+        //let city = "Bagon"; Error
+
+        console.error(country); //undefine
+
+        country = "Myanmar";
+
+        console.warn(country);
+
+        var country = "Thailand";
+        var country = "Srilanka";
+
+        console.log(country);
+
+        //-----------------------------------------
+
+        //Block Scope
+
+        //Loop 
+
+        // for(const x= 0; x < 10; x ++){
+
+        // }
+
+        for (let b = 0; b < 3; b++) {
+            console.log(b);
+        }
+
+        // console.error("b outside value" = b); --> Error
+
+        for (var a = 0; a < 3; a++) {
+            console.log(a);
+        }
+
+        console.log("Outside of for loop", a);
+
+        const num1 = 0;
+        let num2 = 0;
+        var num3 = 0;
+
+        // for(num1; num1 <10;num1++){
+
+        // }
+
+        for (num2; num2 < 3; num2++) {
+            console.log(num2); //0-3
+        }
+        console.log("num2 outside value of let type = ", num2);
+
+        for (num3; num3 < 3; num3++) {
+            console.log(num2); //0-3
+        }
+        console.log("num3 outside value = ", num3);
+
+        //New Declare
+
+        const num4 = 1;
+        let num5 = 2;
+        var num6 = 3;
+
+        // for(const num4=0; num4<3; num4++){
+        //     console.log(num4); //0 --> Error
+        // }
+
+        for (let num5 = 0; num5 < 3; num5++) {
+            console.log(num5); //0-3
+        }
+
+        console.log("num5 outside value =", num5); //2
+
+        //Object
+        const customers = {
+            fullname: "zayar kyaw",
+            age: 30,
+            phone: "0935353"
+        };
+
+        console.log(customers);
+        console.log(customers.fullname);
+        console.log(customers.age);
+        console.log(customers.phone);
+
+        customers.city = "Mandalay";
+        console.log(customers);
+
+        customers.fullname = "Ko Zayar Thaw";
+        console.log(customers);
+
+        //ERROR
+        //const customer = {
+        // citizen : "Myanmar"
+        // }
+
+        let members = {
+            fullname: "Su Su",
+            age: 18,
+            phone: "95038509"
+        };
+
+        console.log(members);
+        console.log(members.fullname, members.age, members.phone);
+
+        members.city = "Mandalay";
+
+        members = {
+            citizen: "Myanmar"
+        };
+
+        console.log(members);
+
+
+        var student = {
+            fullname: "Su Su",
+            age: 18,
+            phone: "95038509"
+        };
+
+        console.log(student);
+        console.log(student.fullname, student.age);
+
+        student.name = "Ma Ma";
+
+        student = {
+            citizen: "Myanmar"
+        };
+
+        console.log(student);
+
+        //-----------------------
+
+        //Array
+        const arrcolors = ['red', 'green', 'blue'];
+        console.log(arrcolors);
+
+        arrcolors[0] = "white";
+        arrcolors[10] = "steelblue";
+        arrcolors.push("orange");
+
+        console.log(arrcolors.length);
+
+        //----------------
+
+        //function scope
+
+        const number1 = 10;
+        let number2 = 20;
+        var number3 = 30;
+
+        function funone() {
+            console.log(number1 + number2 + number3);
+        }
+
+        funone();//60;
+
+        function funtwo() {
+            const x = 100;
+            let y = 200;
+            var z = 300;
+        }
+        funtwo();
+        console.log("Global scope variable number1", number1);
+        console.log("Global scope variable number2", number2);
+        console.log("Global scope variable number3", number3);
+
+        // console.log("Function scope variable x", x);
+        // console.log("Function scope variable y", y);
+        // console.log("Function scope variable z", z); --> Error
+
+        //override
+
+        const p = 1;
+        let q = 2;
+        var r = 3;
+
+        function funthree() {
+            //p = 10;
+            q = 20;
+            r = 30;
+
+            console.log("From funciton, p value is by const = ", p);
+            console.log("From funciton, q value is by let = ", q);
+            console.log("From funciton, r value is by var = ", r);
+
+        }
+
+        funthree();
+
+        console.log("From global, p value is by const = ", p);
+        console.log("From global, q value is by let = ", q);
+        console.log("From global, r value is by var = ", r);
+
+        //new declare
+        const aa = 1;
+        let bb = 2;
+        var cc = 3;
+
+        function funthfour() {
+            //a = 10;
+            bb = 20;
+            cc = 30;
+
+            console.log("From funciton, aa value is by const = ", aa);
+            console.log("From funciton, bb value is by let = ", bb);
+            console.log("From funciton, cc value is by var = ", cc);
+
+        }
+
+        funthree();
+
+        console.log("From global, aa value is by const = ", aa);
+        console.log("From global, bb value is by let = ", bb);
+        console.log("From global, cc value is by var = ", cc);
+
+    </script>
+
+</body>
+
+</html>
