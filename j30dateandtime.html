@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date and Time</title>
+</head>
+<body>
+
+	<div>
+		<small>&copy; <span id="autoyear"></span> Design</small>
+	</div>
+
+	<script type="text/javascript">
+
+		let mydate = new Date(); 
+		console.log(mydate);
+		console.log(typeof mydate); //object
+
+		let getdate = mydate.getDate();
+		console.log(getdate); //18
+
+		let hour = new Date().getHours();
+		console.log(hour); 
+
+		let minute = mydate.getMinutes();
+		console.log(minute);
+
+		let second = mydate.getSeconds();
+		console.log(second);
+
+		// 1s = 1000ms
+		// 1 jan 1970 > uptonow
+
+		let time = mydate.getTime();//float value
+		console.log(time);
+
+		let now = Date.now(); //function//round value - same at new Date().getTime() 
+		console.log(now);
+
+		
+		let month = mydate.getMonth();
+		console.log(month); //8
+
+		let day = mydate.getDay();
+		console.log(day); //3
+
+		let year = mydate.getFullYear();
+		console.log(year); //2024
+
+		let utcyear = mydate.getUTCFullYear();
+		console.log(utcyear);
+
+
+		document.getElementById("autoyear").textContent = utcyear;
+		document.getElementById("autoyear").innerText = utcyear;
+		document.getElementById("autoyear").innerHTML = utcyear;
+
+		//m d y hr:m:s
+		let birthday = new Date("7-10-2020");//Fri Jul 10 2020 00:00:00 GMT+0630 (Myanmar Time)
+		//birthday = new Date("Aug 2 2024 11:46:00:24");//Fri Aug 02 2024 11:46:00 GMT+0630 (Myanmar Time)
+
+		console.log(birthday);
+
+		console.log(birthday.getMonth());
+
+		birthday.setMonth(1); //feb
+		birthday.setDate(9); //9
+		birthday.setYear(1999);
+		birthday.setHours(25);
+		birthday.setMinutes(50);
+		birthday.setSeconds(23);
+
+		console.log(birthday); //Tue Feb 09 1999 00:00:00 GMT+0630 (Myanmar Time)
+
+
+
+	</script>
+</body>
+</html>

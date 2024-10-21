@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Type Conversion</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//string( character array)
+		let val;
+		val = "aung aung";
+		console.log(val);
+		console.log(typeof val);
+		console.log(val.length); //9
+
+		//Number to String
+		val = 20;
+
+		console.log(val); //20
+		console.log(typeof val) //number
+		console.log(val.length); //undefine
+		console.log(String(val).length); //2
+
+		//Boolean to String
+		val = true;
+		console.log(String(val).length); //4
+		console.log(typeof String(val)); //string
+
+		//Data to string
+
+		val = "new Date()"; //new Date()
+		val = String(new Date());
+		console.log(val);
+		console.log(typeof val); //string
+		console.log(val.length); //48
+
+		//Array to String
+		val = [35,4535,3535,343,64];
+		console.log(typeof val); //object
+		console.log(val);//[35,4535,3535,343,64]
+		console.log(String(val)); //35,4535,3535,343,64
+
+		console.log(val.length); //5
+
+		console.log(String(val).length); //19
+
+		//String to number
+		val = "20"; //string
+		val = Number(val);
+		val = +val; //number
+		val = +"val"; //number
+
+		val = 10 + "val"; //string
+		val = 10 + +"val"; //number type
+
+		//console.log(val); // NaN => Not a Number
+		console.warn(typeof val);
+
+		//val = prompt("Enter a number");
+		val = "10";
+		val+= "10";
+		//console.log(val); //1010
+		//console.log(typeof val); //string
+
+		val = 10;
+		val+= "10";
+		//console.log(val); //1010
+		//console.log(typeof val); //string
+
+		val = "10";
+		val+= +"10";
+		console.log(val); //1010
+		console.log(typeof val); //string
+
+		val = "a";
+		val+= +"10";
+		console.log(val); //a10
+		console.log(typeof val); //string
+
+		val = 10;
+		val+= +"a";
+		console.log(val); //NaN
+		console.log(typeof val); //number
+
+		val = Number("Aung Anug");
+		val = +"aung aung";
+		val = Number([3,5,6]);
+
+		val = 123.5;
+		console.warn(val.toFixed(3)); //123.546
+
+		val = val.toFixed(2);
+		//console.log(val.toFixed(2)); //123.00
+		console.log(typeof val); //string
+
+		val = "435.6";
+		val = Number(val);
+		console.log(val);
+		val = parseFloat(val);
+		console.warn(val);
+		val = parseInt(val);
+		console.warn(val);
+
+
+		//Boolean to Number
+
+		val = true
+		val = Number(val); //1
+		val = +false; //0
+
+		console.log(val.toFixed(2));
+		console.log(typeof val);
+
+
+		//string to array
+
+		val = "Su Su";
+		console.log(val.length);
+		val = Array.from(val);
+		console.log(typeof val); //object
+		console.log(val) ;
+		console.log(val.length); //5
+
+		//Note : number,bool,obj can't change to array
+		
+
+
+
+
+
+	</script>
+</body>
+</html>

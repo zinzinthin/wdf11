@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Intro</title>
+</head>
+<body>
+	<p>Hey</p>
+
+	<!-- internal integration js -->
+	<script type="text/javascript">
+
+		console.log("Aung Aung");
+		console.log('Kyaw Kyaw');
+		console.log(`Su Su`);
+
+		console.log(500);
+		console.log('500');
+		console.log("600");
+		console.log(`700`);
+
+		console.log("zaw zaw", "tun tun", 'maung' , `maung`);
+		console.log(100, 200, 300);
+		console.log("Yu Yu" , 500);
+
+		console.log(true);
+		console.log(false);
+
+		console.log(20 + 20); //40
+		console.log("10" + 40); //1040
+
+		console.log(true + true); //2
+		console.log(true + false); //1
+		console.log(true + 50); //51
+		console.log('true' + 20); //true20
+		console.log(true + "aung aung"); //trueaung aung
+		console.log("zaw zaw" + true); //zaw zawtrue
+
+
+
+		//Variable (var/let/const) => var/let/const variablename = value;
+
+		var fullname = "Myo Myo"; 
+		//let fullname = "Aye Aye";
+		console.log(fullname);
+
+	//concatenate (+);
+		console.log("My friend is " + fullname);
+		console.log('My friend is ' + fullname);
+		console.log(`My friend name is ` + fullname);
+
+	//Backticks (``)
+		var lady = "Honey Nway Oo";
+		console.log("We love lady");
+		console.log(`We love lady ${lady}`); //We love lady Honey Nway Oo
+
+		var num1 = 10;
+		var num2 = 20;
+
+		console.log(num1,num2); //10 20
+		console.log(num1+num2); //30
+
+		console.log("num1 + num2"); //num1 + num2;
+		console.log("num1" + "num2"); //num1num2
+
+		console.log(`${num1}` + `${num2}`); //1020
+		console.log(`${num1} + ${num2}`); //10 + 20;
+		console.log(`${num1 + num2}`); //30
+		console.log(typeof `${num1 + num2}`); //string
+
+	//Overwrite / Override
+		var num3 = 30;
+		var num4 = 40;
+
+		console.log(num3 + num4); //70
+		console.log("num3 value is" + num3);
+		console.log(`num4 value is ${num4}`);
+
+		num3 = 50;
+		var num4 = 400; //No Error : can declare var keyword again
+		console.log("num3 value is " + num3);
+		console.log(`num3 + num4 is = ${num3 + num4}`);
+
+		let num5 = 50;
+		console.log(num5);
+
+		//let num5 = 500; //Uncaught SyntaxError: Identifier 'num5' has already been declared
+		num5 = 500;
+		console.log(num5);
+
+		const num6 = 60;
+		console.log(num6);
+		//num6 = 600; // Uncaught TypeError: Assignment to constant variable.
+
+
+		//Special Escape Character ()
+		console.log('Hey I am working');
+		console.log("Hey I am working");
+		console.log("Hey I am 'working' now"); //Hey I am 'working' now
+		console.log('Hey I am "working" now'); //Hey I am "working" now
+
+		//console.log("Hey I am "working" now"); //Error
+		//console.log('Hey I am 'working' now'); //Error
+
+		console.log("Hey I'm working now"); //Hey I'm working now
+		console.log('He is about 6ft 4" '); //He is about 6ft 4" 
+
+		let x = 'He\'s U Ba';
+		let y = "He\'s my \"uncle\" ";
+
+		console.log(`${x} ${y}`); //He's U Ba He 's my "uncle" 
+		console.log(x + y); //He's U BaHe 's my "uncle"
+
+ 	
+		// alert("Hello");
+		// window.alert("Myanmar");
+
+		//declare var keywork 
+		//alert(fullname); //Undefine
+		//fullname = "Zin Zin";
+		//console.log(fullname); //Zin Zin
+
+		//declare let keywork 
+		//console.log(fullname); //Error : can't access lexical declaration 'fullname' before initialization 
+		//fullname = "Zin Zin";
+		//console.log(fullname); // Uncaught ReferenceError: Cannot access 'fullname' before initialization
+
+	</script>
+</body>
+</html>

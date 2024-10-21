@@ -1,0 +1,7 @@
+p{
+	user-select: none;
+}
+.paragraph::first-letter{
+	font-weight: bold;
+	color: darkred;
+}

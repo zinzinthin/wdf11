@@ -1,0 +1,71 @@
+:root{
+	--gn:green;
+	--or:orange;
+	--red:red;
+	--width:300px;
+}
+
+div{
+	width: 300px;
+	height: 300px;
+}
+
+.div1{
+	width: var(--width);
+	height: 80px;
+	background: var(--gn);
+	transform: rotate(15deg);
+}
+.div2{
+	--wh:300px;
+	width: var(--wh);
+	height: 300px;
+	background: var(--red);
+	transform: rotate(1turn);
+}
+.div3{
+	width: 300px;
+	height: 300px;
+	background-color: var(--red);
+	transform: rotateX(-45deg);
+}
+.div4{
+	width: 300px;
+	height: 300px;
+	color: white;
+	background-color: var(--red);
+	transform: rotateY(-45deg);
+}
+.div5{
+/* default scale value is 1	*/
+	transform: scale(0.5);
+	background-color: var(--gn);
+}
+.div6{
+	transform: skew(20deg);
+	background: black;
+}
+.div7{
+/* default translate x axis and start from 0, so move to next 10px	*/
+	transform:translate(10px);
+	tranform:translateX(10px);
+	transform: translateY(10px);
+	background-color: cadetblue;
+}
+.div8{
+	background: orange;
+/*	translate x and y*/
+transform: translate(50%,50%);
+translate: translateX(-50%)translateY(50px);
+
+}
+
+h1{
+	text-align: center;
+	color: green;
+}
+
+.text{
+	text-align: justify;
+	color: steelblue;
+}

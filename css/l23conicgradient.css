@@ -1,0 +1,136 @@
+body{
+	background-color: black;
+}
+/*conic-gradient cannot rotate*/
+.circle1,.circle2,.circle3,.circle4,.circle5,.circle6{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+.circle1{
+	background: conic-gradient(yellow,red,green,pink);
+}
+.circle2{
+	background-image:conic-gradient(
+		#eb4034,
+		#ebd234,
+		#b1eb34,
+		#34ebd5,
+		#170dd6,
+		#bf0dd6,
+		#b51655
+	);
+}
+
+.circle3{
+	background: conic-gradient(
+		rgba(245, 40, 145, 0.8),
+		#170dd6
+	);
+}
+.circle4{
+	background: conic-gradient(
+		hsla(245,100%,50%,1),
+		hsla(0, 100%, 50%, 1.0)
+	);
+}
+.circle5{
+	background: conic-gradient(
+		/*red 40%,
+		green 60%,
+		blue 80%,
+		black 100%);*/
+		red 40%,
+		green 0% 60%,
+		blue 0% 80%,
+		black 0% 100%);
+
+}
+.circle6{
+	background: linear-gradient(
+		/*red 40%,
+		green 60%,
+		blue 80%,
+		black 100%);*/
+		45deg,
+		red 40%,
+		green 0% 60%,
+		blue 0% 80%,
+		yellow 0% 100%);
+
+}
+
+.boxone{
+	width: 600px;
+	height: 300px;
+	display: flex;
+	/* hz center -> can be changed according dependent property(display : flex)*/
+	justify-content: center; 
+	/* vt center -> thery are dependent property */
+	align-items: center; 
+
+ 	/* there must be only one child , if want vertical -> can be more child*/
+	/*display: grid;
+	place-items: center;*/
+
+	position: relative;
+}
+
+.boxone .div1{
+	width: 300px;
+	height: 300px;
+    border-radius: 50%;
+    position: absolute;
+    background: black;
+    z-index: 2;
+}
+
+.boxone .div2{
+	width: 320px;
+	height: 320px;
+	border-radius: 50%;
+	z-index: 1;
+
+	background: conic-gradient(
+		red,
+		violet 20%,
+		blue 70%,
+		red 0%,
+		yellow 100%
+	);
+}
+
+.pointercontainer{
+	width: 20px;
+	height: 200px;
+	position: absolute;
+	z-index: 3;
+	background: gray;
+	top:100px;
+
+	animation-name:myani;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+	transform-origin: bottom;
+
+}
+
+.pointer{
+	width: 20px;
+	height: 20px;
+	background: red;
+	display: block;
+	border-radius: 50%;
+}
+
+@keyframes myani{
+	from{
+		transform:rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}

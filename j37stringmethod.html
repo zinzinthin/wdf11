@@ -1,0 +1,89 @@
+<!DOCTYPE  html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>String Method</title>
+</head>
+<body>
+<script type="text/javascript">
+	let firstname = "Aung San";
+	let lastname = " Su Kyi";
+
+	console.log(firstname,lastname); //Aung San Su Kyi
+	console.info(firstname.length); //8
+
+	//Concat(+)
+
+	let funllname = firstname + lastname;
+	console.log(funllname);
+
+	//concat(string)
+	console.log(firstname.concat(lastname));
+
+	//Append(+=)
+	console.log(firstname+=lastname);
+
+	let num = 4;
+	console.log(num+=5); //9
+
+	//string is character array in js
+	let name = "Su Yatanar";
+	console.log(name[0]); //S
+	console.log(name[2]); 
+	console.log(typeof name[2]); //string
+	console.log(name[name.length-1]); //r
+
+	//charAt() => string method
+	console.log(name.charAt(5));//t
+	console.log(name[5]);//t
+	console.log(name.charAt(name.length-1)); //r
+
+	//repeat()
+	const greeting = "Hello World";
+	console.log(greeting.repeat(5));//Hello WorldHello WorldHello WorldHello WorldHello World
+
+
+	//includes()
+	let favcolor = "My fav color is black color";
+	console.log(favcolor.includes("black")); //true
+	console.log(favcolor.includes("Black"));//false
+	console.log(favcolor.includes("bla")); //true
+
+	//replace(old,new)
+	console.log(favcolor.replace("black","red")); //My fav color is red color
+	console.log(favcolor.replace("Black","red")); //My fav color is black color
+	console.log(favcolor.replace("color","colour")); //My fav colour is black color
+
+	//startsWith("");
+	//startWith("",index);
+	const sayhi = "Dear U Ba";
+	console.log(sayhi.startsWith("Dear")); //true
+	console.log(sayhi.startsWith("dear")); //false
+	console.log(sayhi.startsWith("D")); //true
+
+	console.log(sayhi.startsWith("Dear",0));
+	console.log(sayhi.startsWith("ar",2));
+	console.log(sayhi.startsWith("U",5));
+
+	//endsWith("",length);
+	//endsWith("");
+	console.log(sayhi.endsWith("Dear"));
+	console.log(sayhi.endsWith("dear"));
+	console.log(sayhi.endsWith("D"));
+
+	console.warn(sayhi.endsWith("Dear",0));
+	console.log(sayhi.endsWith("ar",2));
+	console.log(sayhi.endsWith("U",6));
+ 
+ //substring(index,length)
+	console.log(favcolor.substring(0,10).concat("...")); // My fav col...
+
+	//change case
+	console.log(favcolor.toLowerCase());
+	console.log(favcolor.toUpperCase());
+
+
+
+</script>
+</body>
+</html>

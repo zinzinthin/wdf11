@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	let arrcolors = ["green","red","black","blue"];
+	//indexOf(value)
+	console.log(arrcolors.indexOf('black')); //2
+	console.log(arrcolors.indexOf('Black')); //-1
+
+	//Array.isArray()
+	const name = "aung aung";
+	console.log(Array.isArray(name)); //false
+	console.log(Array.isArray(arrcolors)) ; //true
+
+	//join('de')
+	console.log(String(arrcolors));
+	console.log(arrcolors.toString());
+	console.warn(arrcolors.join());
+	console.log(arrcolors.join(""));
+	console.log(arrcolors.join(" "));
+	console.log(arrcolors.join("-"));
+	console.warn(typeof arrcolors.join());
+
+	const candies = ['red','green','blue','white','black'];
+	candies[5] = "pink";
+	candies[1] = "orange";
+	//candies = [3,56,52,32,12]; //Error
+
+	//push(value); Note :: Add new value to array (addon to the end)
+	candies.push("gold");
+
+	//unshift(value) Note :: Add new value to array (addon to the start)
+	candies.unshift("bluesky");
+
+	//shift(); Note :: remove from the start
+	candies.shift();
+
+	//pop(); Note :: remove from the end
+	candies.pop();
+
+	//delete; Note :: Remove only value
+	delete candies[1];
+	delete candies[2];
+
+	//splice(start length, no of element);
+	console.log(candies);
+	const paints = candies.splice(2,5);
+	console.warn(paints);
+
+	//concat()
+	const arr1 = ['aung aung', 'maung maung', 'tun tun', 'kyaw kyaw'];
+	const arr2 = ["su su", "nu nu", "yu yu", "lue lue"];
+	const arr3 = [34,23];
+
+	console.log(typeof (arr1+arr2));//aung aung,maung maung,tun tun,kyaw kyawsu su,nu nu,yu yu,lue lue
+	console.log(arr1.concat(arr2));
+	console.log(arr3.concat(arr2)); //(6)[34, 23, 'su su', 'nu nu', 'yu yu', 'lue lue']
+
+	//sort() a to z
+	const combinearrs = arr1.concat(arr2);
+	 console.log(combinearrs);
+	 console.log(combinearrs[0]);
+	 console.log(combinearrs[4]);
+
+	 console.log(combinearrs.sort());
+
+	// reverse() Note :: reverse can't set z to a, it's just reverse
+	 console.log(combinearrs.reverse());
+
+	 const arrnumbers = [2,3,35,232,46,23];
+	 console.log(arrnumbers);
+	 console.log(arrnumbers.sort());//(6) [2, 23, 232, 3, 35, 46]
+	 console.log(arrnumbers.reverse());//(6) [46, 35, 3, 232, 23, 2]
+
+
+
+
+</script>
+</body>
+</html>

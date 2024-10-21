@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Type</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		//1.string
+		const name = "Su Su";
+		console.log(typeof(name)); //function
+		console.warn(typeof name);
+		console.error(typeof name); //keyword
+
+		const nickname = "";
+		console.log(typeof nickname); //empty is string type
+
+		//2.Number
+		const age = 25;
+		const weight = 98.88;
+		console.log(age);
+		console.log(typeof(age));
+		console.warn(typeof weight);
+
+
+		//3.Boolean(true,false small letter only)
+		const hascar = true;
+		console.log(hascar);
+		console.log(typeof hascar);
+
+		//4.object
+
+			//class object
+			var date = new Date();
+			console.log(typeof date);
+
+			//(Javascript Object) {key:value}
+			const address = {
+				no : "NO.123",
+				street : "st btw 74x53",
+				city : "Mandalay",
+				country : "Myanmar",
+			};
+
+			console.log(address);
+			console.log(typeof address);
+			console.log(address.no); //NO.123
+			console.log(address.country); //Myanmar
+
+			//Json object {"key" : ""}
+			const json = {
+				"no": "NO.123",
+				"street" : "st btw 74x53",
+				"city" : "Mandalay",
+				"country" : "Myanmar",
+			};
+
+			//Array is under object
+
+			 const array1 = ["movie","music","sport"];
+			 console.log(array1);
+			 console.log(typeof array1); //object
+			 console.log(array1[0]); //movie
+			 console.log(array1[1]); //music
+
+			 const car = null
+			 console.log(car);
+		 	 console.log(typeof car); //object
+
+		//5. undefine
+		 let test;
+		 console.log(typeof test); //undefine
+
+		//6 . null
+
+		 let example = null;
+		 console.log(typeof example); //object - but it's null data type not object
+
+
+		//empty => undefine,null,"" 
+
+
+		// 7. bitint
+
+		// 8 . symbol
+
+
+
+	
+
+
+	</script>
+</body>
+</html>
