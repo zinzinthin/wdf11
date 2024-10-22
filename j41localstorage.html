@@ -3,9 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Temporatory Storage for Javascript</title>
 </head>
 <body>
+    <h1>Database</h1>
+    <ol>
+        <li>
+            <h3>Temporary Storage</h3>
+            <ol style="list-style: lower-roman;">
+                <li>
+                    <h5>Local Storage</h5>
+                
+                        <ul>
+                            <li>Works in browser</li>
+                            <li>deleted when user deletes and can't define limit time</li>
+                            <li>shares on all windows(tab)</li>
+                        </ul>
+                    
+                </li>
+                <li>
+                    <h5>Cookie</h5>
+                    
+                        <ul>
+                            <li>Works in both browser and server</li>
+                            <li>deleted when user deletes or reaches limit time</li>
+                            <li>shares on all windows(tab)</li>
+                        </ul>
+                    
+                </li>
+                <li>
+                    <h5>Session</h5>
+                     <ul>
+                        <li>
+                            Works in browser(js)
+                        </li>
+                        <li>Delete when tab is closed</li>
+                        <li>Not share windows - Only works in its own tab</li>
+                     </ul>
+                </li>
+            </ol>
+        </li>
+        <li>
+            <h3>Permanent Storage</h3>
+        </li>
+    </ol>
     <script>
         // Read
         localStorage.setItem("name","Su Su");
@@ -28,6 +69,8 @@
         //delete
         localStorage.removeItem("name");
         localStorage.clear();
+
+        sessionStorage.setItem('name','su su');
     </script>
 </body>
 </html>
