@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // Read
+        localStorage.setItem("name","Su Su");
+        localStorage.setItem("age",26);
+        localStorage.setItem("city","Yangon");
+
+        //update
+        localStorage.setItem("name","Aung");
+        localStorage.city = "Mandalay";
+
+        //read
+        const name = localStorage.name;
+        const age = localStorage.age;
+        console.log(typeof name, typeof age); //string string
+
+        const getName = localStorage.getItem("name");
+        const getAge = localStorage.getItem("age");
+        console.log(typeof name, typeof age); //string string
+
+        //delete
+        localStorage.removeItem("name");
+        localStorage.clear();
+    </script>
+</body>
+</html>
