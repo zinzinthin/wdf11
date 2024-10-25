@@ -1,11 +1,34 @@
 <html>
+
 <head>
 	<title>Pseudocalss</title>
-	<link href="css/l19pseudoclass.css" rel="stylesheet" />
+	<!-- <link href="css/l19pseudoclass.css" rel="stylesheet" /> -->
+	<style>
+
+		/* .nth-child-example p:nth-child(2) {
+            color: red; 
+        }
+
+        .nth-of-type-example p:nth-of-type(2) {
+            color: blue; 
+        } */
+
+
+		p:nth-child(2) {
+			color: red;
+			/* Affects second child, no matter the type */
+		}
+
+		p:nth-of-type(2) {
+			color: blue;
+			/* Affects second <p> element specifically */
+		}
+	</style>
 </head>
+
 <body>
 	<!-- <p class="">Hello ....</p> -->
-	<div>
+	<!-- <div>
 		<p>Hello I am div</p>
 	</div> 
 	<div class="div1">
@@ -16,6 +39,34 @@
 	</div>
 	<div class="div1">
 		<p>I love div 1.3</p>
+	</div> -->
+
+	<!-- <h2>nth-child Example</h2>
+    <div class="nth-child-example">
+        <p>First paragraph</p>
+        <span>Second child but not a paragraph</span>
+        <p>Third child but second paragraph</p>
+    </div>
+
+    <h2>nth-of-type Example</h2>
+    <div class="nth-of-type-example">
+        <p>First paragraph</p>
+        <span>Not a paragraph</span>
+        <p>Second paragraph</p>
+    </div> -->
+
+	
+	<div>
+		<p>First paragraph</p>
+		<span>Second child but not a paragraph</span>
+		<p>Third child but second paragraph</p>
 	</div>
+
+	<p>Outside the div, first paragraph</p>
+	<p>Outside the div, second paragraph</p>
+	<span>Third child, not a paragraph</span>
+	<p>Outside the div, third paragraph but second
+	<p> element</p>
 </body>
+
 </html>
