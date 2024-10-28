@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Function</title>
+</head>
+<body>
+    <h1>Generator Function</h1>
+    <ul>
+        <li>yield</li>
+        <li>next()</li>
+    </ul>
+    <script>
+
+        //using regular function
+        let y = 1;
+        function increment(){
+            console.log(y++);
+        }
+        increment();
+        increment();
+        increment();
+        increment();
+        increment();
+
+        //generator function
+        function* generatorFun(){
+            //yield 1;
+            yield 1;
+            yield 2;
+            yield 3;
+        }
+        //console.log(generatorFun); //Generator { constructor: Iterator() }
+        console.log(generatorFun().next()); //Object {value:1, done:false}
+        console.log(generatorFun().next().value);//1
+        console.log(generatorFun().next().value);//1
+        console.log(generatorFun().next().value);//1
+
+        const generator = generatorFun();
+        console.log(generator.next());//Object { value: 1, done: false }
+        console.log(generator.next());//Object { value: 2, done: false }
+        console.log(generator.next());//Object { value: 3, done: false }
+        console.log(generator.next());//Object { value: undefined, done: true }
+        console.log(generator.next().value);//undefined
+        console.log(generator.next().value);//undefined
+        console.log(generator.next().value);//undefined
+    </script>
+</body>
+
+</html>

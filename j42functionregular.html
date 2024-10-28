@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Regular Function (Nameless function)</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            width: 50%;
+            background-color: steelblue;
+            color: #fff;
+            padding: 3%;
+            border-radius: 5%;
+        }
+
+        label{
+            display: block;
+            margin: 10px 0;
+        }
+
+        .form-control{
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 20px;
+        }
+
+        .btn{
+            width: 50%;
+            color: #fff;
+            font-size: 16px;
+            background: linear-gradient(
+                45deg,
+                red,
+                green,
+                blue,
+                red
+            );
+
+            border: none;
+            border-radius: 30px;
+            padding: 5px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Function</h1>
+    <ol>
+        <li>
+            <h3>System/Default Function</h3>
+        </li>
+        <li>
+            <h3>User Defined Function</h3>
+            <ol style="list-style: lower-roman;">
+                <li>
+                    <h6>Regular Function</h6>
+                    <ol style="list-style: lower-alpha;">
+                        <li>Manual Function</li>
+                        <li>Parameter Function</li>
+                    </ol>
+                </li>
+                <li>
+                    <h6>Arrow Function(es6)</h6>
+                    <ol style="list-style: lower-alpha;">
+                        <li>Manual Function</li>
+                        <li>Parameter Function</li>
+                    </ol>
+                </li>
+                <li>
+                    <h6>Generator Function</h6>
+                </li>
+            </ol>
+        </li>
+    </ol>
+
+    <div class="container">
+        <h3>Show Name = <span id="replacename"></span></h3>
+        <form action="" method="">
+
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" name="" id="firstname" class="form-control" autocomplete="off" autofocus />
+            </div>
+
+            <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" name="" id="lastname" class="form-control" autocomplete="off" />
+
+            </div>
+            <button type="button" class="btn" onclick="getdata()">Get Name</button>
+        </form>
+    </div>
+    <script>
+        // (i) Manual Function
+        function greeting() {
+            console.log("Mingalar par");
+        }
+
+        greeting(); //Mingalar par
+
+        // function greeting(){
+        //     console.log("Override perious one - not error in js");
+        // }
+
+        function funOne() {
+            console.log("I am fun one");
+        }
+
+        function funTwo() {
+            console.log("I am fun two");
+        }
+
+        function funThree() {
+            //funFour(); //funFour doesn't declare, so funFour is not defined error
+            funTwo();
+            funOne();
+        }
+
+        funThree();
+
+
+        //--------------------------RETURN-----------------------------
+
+        function funFive() {
+            const num = 5;
+            console.log(num);
+        }
+
+        funFive(); //5
+
+        let num = funFive(); //5
+        console.log(num);//undefined
+
+
+        function funSix() {
+            //return 7,8; //output is 8 but should not use this method
+            return 6;
+            return 7; //useless
+            return 8; //useless
+
+
+        }
+
+        num = funSix();
+        console.log(num); //6
+
+        function funSeven() {
+            return 7;
+        }
+
+        function funEight() {
+            const x = 8;
+            return x;
+        }
+
+        console.log(funSeven() + funEight()); //15
+
+        //+++++++++++++++++++++++++++++++++++ Parameter Function +++++++++++++++++++++++++++
+
+        function myfunc(city) {
+            console.log(city);
+        }
+
+        myfunc("Yangon");
+
+        myfunc("Bago");
+
+        myfunc();
+
+        //default parameter
+
+        function myDefault(country = 'Myanmar') {
+            console.log(`Hello ${country}`);
+        }
+
+        myDefault();
+
+        //Parameter Function
+        function multiFun1(x,y,z){
+            console.log( `x value is ${x}, y value is ${y} and z value is ${z}`);
+        }
+
+        multiFun1(54);
+        multiFun1(34,55,342,654);
+
+        function multiFun2(x = 3,y,z){
+            console.log( `x value is ${x}, y value is ${y}`);
+        }
+
+        multiFun2('x');
+
+
+        function multiFun3(x=1,y=2,z=3){
+
+            const resutl = x + y + z;
+            return resutl;
+
+        }
+
+        console.log(multiFun3);//6
+        console.log(multiFun3(30,2)); //35
+
+
+        //+++++++++++++++++++++++++++++++++++++++Nameless Function+++++++++++++++++++++++++++++
+
+        // function(name , color){
+        //     console.log(`My name is ${name} and I love ${color}`);
+        // }; Note !!! Syntax Error : must assign to a variable 
+
+        const infoFun = function(name, color){
+            console.log(`My name is ${name} and I like ${color}`);
+        }
+
+        const testFun = function test(name , color){
+            console.log(`My name is ${name} and I love ${color}`);
+        };
+
+
+        infoFun("Aung Aung", "Black");
+
+        testFun("Ha Ha","Hey");
+        //test("Uncaught ReferenceError:","test isn't defined");
+
+    </script>
+
+    <script>
+        function getdata(){
+            const firstname = document.getElementById('firstname');
+            const lastname = document.getElementById('lastname');
+            document.getElementById('replacename').innerText = `${firstname.value} ${lastname.value}`;
+
+            firstname.value = "";
+            lastname.value = "";
+
+            firstname.focus();
+        }
+    </script>
+</body>
+
+</html>
