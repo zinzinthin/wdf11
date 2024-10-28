@@ -6,7 +6,14 @@
 	<title>Looping</title>
 </head>
 <body>
+	<h1>Looping</h1>
+	<ol>
+		<li>for loop</li>
+		<li>for in loop</li>
+	</ol>
 	<script type="text/javascript">
+
+		//+++++++++++++++++++++++++++++++++++++++++++++ (1)for loop ++++++++++++++++++++++++++++++++++++
 		// for(const p=0; p<5; p++){
 		// 	console.log("Error bcz can't increase p");
 		// }
@@ -41,39 +48,61 @@
 		//odd[m/2] = m;
 		console.log(`odd number is ${odd}`);
 
-		let students = {
+
+		//+++++++++++++++++++++++++++++++++++++++++++++ (2)for in loop ++++++++++++++++++++++++++++++++++++
+
+		let students = { //js object or associated array
 			name : "Aung Aung",
 			city : "Mandalay",
 			parent : "U Ba",
 			phone : "080398509",
 		}
+		
 		console.log(students);
 		console.log(students.name);
 
+		//for(key in associated-array(js object)){}
+
 		for(key in students){
-			console.log(key);
+			console.warn(key);
 			//console.log(students.key); //Error bcz for in loop works as array, so can't use like object
 
 			console.log(students[key]);
 			console.warn(students.length);
 		}
 
-		//3.for of loop(array)
-		//for(value of array)
+		let nums = [3,5,67,768,2,86];
+		console.log(nums);
+		for(key in nums){
+			console.log(`${key} => ${nums[key]}`);
+		}
+
+		//+++++++++++++++++++++++++++++++++++++++++++++++++ (3)for of loop(array) +++++++++++++++++++++++++++++++
+		
+		//for(value of array){}
 
 		const girls = ["su su","yu yu","aya aya"];
 
-		for(girl of girls){
+		console.log(girls);
 
+		for(girl of girls){
+			console.log(girl);
+			//console.log(typeof girls);
 		}
 
-		//4. While loop
+		// for(student of students){
+		// 	console.error(student); Note!!! Uncaught TypeError: students is not iterable
+		// }
+
+		//+++++++++++++++++++++++++++++++++++++++++++++++++++ (4) While loop +++++++++++++++++++++++++++++++++++++++++
+		
 		// start
 		// while(condition){
 		// 	//Before printout
 		// 	//code to be executed
 		// 	//After Printout
 		// }
+
 		let b = 0;
 		while(b < 10){
 			console.log("Number b value is  = " , b);
@@ -87,19 +116,23 @@
 			
 		}
 
-		//5.Do While loop
+		//++++++++++++++++++++++++++++++++++++++++++++++++++++(5)Do While loop ++++++++++++++++++++++++++
+		
 		// start
 		// do{
 		// 	//Before printout
 		// 	//code to be executed
 		// 	//After Printout
 		// }while(condition)
+
 		const paints = ["red","white","black"];
 		var num = 0;
+		
 		while(num < paints.length){
 			console.log("paint is" , paints[num]);
 			num++;
 		}
+
 
 		const laptop = [
 		{
@@ -109,31 +142,41 @@
 		}
 		];
 		let id = 0;
+
 		while(id < laptop.length){
 			console.log("cup is" , laptop[id].cpu, "ram is " , laptop[id].ram);
 			id++;
 		}
 
+
 		let n =0;
+		
 		do{
 			console.log(n);
 			n++;
 		}while(n<10);
 
+
 		const colors = ["red","green","blue"];
 		let index = 0;
+
 		do{
 			console.log(`index ${index} is`, colors[index]);
 			++index;
 		}while(index < colors.length);
 
-		//6.foreach
+		//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ (6)foreach ++++++++++++++++++++++++++++++++++++++
+		
 		// colors.forEach(function(value,index,array){
 		// 	//code to be execute
 		// });
 
-		colors.forEach(function(color,index,array){
-			console.log(color);
+		let persons = ["Aung Aung","Su Su","Kay Kay"];
+
+		console.log(persons);
+
+		persons.forEach(function(value,index,array){
+			console.log(value);
 			console.log(index);
 			console.log(array);
 		});
