@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOM => To Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/l47todolist.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Todo list</h3>
+                <form id="" class="form" action="" method="">
+                    <div class="form-group">
+                        <label for="task">Enter a new task</label>
+                        <input type="text" name="" id="task" class="form-control" />
+                    </div>
+                    <input type="submit" id="add-task" class="btn" value="Add Task">
+                </form>
+            </div>
+            <div class="card-footer">
+                <h4>All My Tasks</h4>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        List Item 1
+                        <a href="#" id="item1" class="delete-item"><i class="fa-solid fa-trash-can"></i></a>
+                    </li>
+                    <li class="list-group-item">
+                        List Item 2
+                        <a href="#" id="item2" class="delete-item"><i class="fa-solid fa-trash-can"></i></a>
+                    </li>
+                    <li class="list-group-item">
+                        List Item 3
+                        <a href="#" id="item3" class="delete-item"><i class="fa-solid fa-trash-can"></i></a>
+                    </li>
+                    <li class="list-group-item">
+                        List Item 4
+                        <a href="#" id="item4" class="delete-item"><i class="fa-solid fa-trash-can"></i></a>
+                    </li>
+
+                </ul>
+                <a href="javascript:void(0);" id="clear-task" class="clear-tasks">Clear All</a>
+            </div>
+            <div class="moretasks">
+                <img src="https://i.gifer.com/ZKZg.gif" class="loading" alt="loading" srcset="">
+            </div>
+        </div>
+    </div>
+    <script src="js/j47todolist.js"></script>
+</body>
+
+</html>

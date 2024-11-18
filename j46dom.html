@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document Object Modal - Clock</title>
+</head>
+<style>
+    body {
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <h3 id="display">00:00:00 PM Sunday</h3>
+    <script>
+        function startclock() {
+            const getdisplay = document.getElementById('display');
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+            const getdate = new Date();
+
+            let gethours = getdate.getHours();
+
+            let getminutes = getdate.getMinutes();
+
+            let getseconds = getdate.getSeconds();
+
+            let getday = getdate.getDay();
+
+            let getampm;
+            switch (gethours > 12) {
+                case true:
+                    getampm = "PM";
+                    gethours = gethours - 12;
+                    break;
+                case false:
+                    getampm = "AM";
+                    break;
+            }
+
+            let setclock = `${gethours} : ${getminutes} : ${getseconds} : ${getampm} ${days[getday]}`;
+
+            getdisplay.textContent = setclock;
+        }
+
+        startclock();
+
+        //1s = 1000ms;
+        setInterval(startclock, 1000);
+
+    </script>
+
+</body>
+
+</html>
