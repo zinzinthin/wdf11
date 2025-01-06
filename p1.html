@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM practice</title>
+</head>
+
+<body>
+
+    <a href="javascript:void(0);" id="A1" class="a text-decoration-none"></a>
+    <a href="javascript:void(0);" id="A2" class="a"></a>
+    <button style="background-color: red;">Change Color</button>
+
+    <ul>
+        <li><a href="">link1</a></li>
+        <li><a href="">link2</a></li>
+        <li id="testParent"><a href="" class="test">link3</a></li>
+    </ul>
+
+    <ol class="orderlist">
+        <li>li1</li>
+        <li>li2</li>
+        <li>li3</li>
+        <li><a href="">li4</a></li>
+        <li><a href="">Li5</a></li>
+    </ol>
+
+
+
+    <script type="text/javascript">
+
+        console.log(document);
+        console.log(document.doctype);
+        console.log(document.head);
+        console.log(document.body);
+        console.log(document.URL);
+
+        //-------------------------------------------------------------------------------------HTMLCollections
+        console.log(document.links); //HTML collections 
+        console.log(document.links[0]);//<a id="A1" class="a1" href="javascript:void(0);">
+        console.log(document.links[0].id);//A1
+        console.log(document.links[0].className); //a text-decoration-none (all is as one string)
+        console.log(document.links[0].classList); //DOMTokenList [ "a", "text-decoration-none" ]
+        console.log(document.links[0].classList[1]); //text-decoration-none
+
+        console.log(document.forms); //HTMLCollection
+        // console.log(document.forms[0].action); //if null, return document url
+
+        console.log(document.images);//htmlcollections
+        console.log(document.scripts);// htmlcollections
+
+        //----------------------------------------------------------------------------------------Change Style
+        // style -> as tag or attribute in html / as object in js / as css() in jquery
+
+        document.querySelector('button').style.color = "white";
+
+        //----------------------------------------------------------------------------------------Change Content
+        //textContent or innerText
+        //innerHTML
+
+        document.getElementById('A1').textContent = "Hello";
+
+        //----------------------------------------------------------------------------------------Call by className
+
+        const archers = document.getElementsByClassName('a');
+        console.log(archers); //HTMLCollection { 0: a#A1.a.text-decoration-none, 1: a#A2.a, length: 2, … }
+
+        //------------------------------------------------------------------------------------------Call by tag Name
+
+        console.log(document.getElementsByTagName('li')); //HTMLCollection { 0: li, 1: li, 2: li, length: 3 }
+
+        //-------------------------------------------------------------------------------------------Query Selector
+        //querySelector => collect first node
+        //querySelectorAll => collect all
+
+        const Selector = document.querySelector('li');
+        console.log(Selector); //li (html format called node)
+
+        const selectorAll = document.querySelectorAll('li');
+        console.log(selectorAll); //NodeList(3) [ li, li, li ]
+
+        const orderlist = document.querySelector('.orderlist');
+        // const orderlistitems = orderlist.querySelectorAll('li');
+        const orderlistitems = document.querySelectorAll('.orderlist li');
+       
+        orderlistitems.forEach(function(item){
+            console.log(item.textContent);
+        });
+
+        //--------------------------------------------------------------------------------------------Parnet to child
+
+        let parentul = document.querySelector('ul');
+        let getchildren = parentul.children;
+        console.log(getchildren); //HTMLCollection { 0: li, 1: li, 2: li, length: 3 }
+        console.log(getchildren[2].children); //HTMLCollection { 0: a, length: 1 }
+        console.log(getchildren.length);
+
+        //---------------------------------------------------------------------------------------------Child to parent
+
+        const getchild = document.querySelectorAll('.test');
+        // console.log(getchild);
+
+        console.log(getchild[0].parentElement.id);
+
+        //--------------------------------------------------------------------------------------------Sibling
+        //next 
+        //previous
+
+        console.log(document.querySelector('button').nextElementSibling);
+        console.log(document.querySelector('ul').previousElementSibling);
+
+        //-----------------------------------------------------------------------------------------------Create Element
+        /*
+        *create
+        *add necessary attributes(optional)
+        *apend to document(parent)
+        */
+       const newli = document.createElement('li');
+
+       newli.id = "newItem";//DOMTokenList(4) [ "test", "list-group-item", "new-item", "list-style-none" ]
+       
+       newli.className = "list-group-item new-item";
+       newli.className = "test"; //overwrite existing classname
+      
+       newli.classList.add("list-group-item"); //<li id="newItem" class="test list-group-item">
+       newli.classList.add("new-item","list-style-none");
+       
+       console.log(newli.classList); //DOMTokenList(4) [ "test", "list-group-item", "new-item", "list-style-none" ]
+       console.log(newli.classList.contains('new-item')); //true
+
+       const newcontent = document.createTextNode("New List Item");
+       newli.appendChild(newcontent);
+
+       newli.setAttribute("title","create new item");
+
+       document.querySelector('ul').appendChild(newli);
+       console.log(newli.getAttribute('title'));
+       console.log(newli.hasAttribute('new-item'));//false
+
+       console.log(newli);
+
+       //---------------------------------------------------------------------------Replace child
+
+       const olditem = document.querySelector('ul li');
+       document.querySelector('ul').replaceChild(newli,olditem);
+       document.querySelector('ul').append(newli);
+       document.querySelector('ul').append(newli);
+       document.querySelector('ul').append(newli); //don't work bcz create element does as single skeleton
+
+       //---------------------------------------------------------------------------Remove Child
+       
+       document.querySelector('ol').lastElementChild.remove();
+
+       const childnode = document.querySelector('ol').firstElementChild;
+       document.querySelector('ol').removeChild(childnode);
+
+       
+
+
+        
+
+
+    </script>
+</body>
+
+</html>
